@@ -1,5 +1,4 @@
 ﻿using CountryStateCity.Models;
-//using CountryStateCity.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 

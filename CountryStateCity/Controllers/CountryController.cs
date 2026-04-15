@@ -1,76 +1,4 @@
 ﻿
-//using Microsoft.AspNetCore.Http;
-//using Microsoft.AspNetCore.Mvc;
-//using System.Diagnostics.Metrics;
-//using WebApplication1.Models;
-
-//namespace WebApplication1.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class CountryController : ControllerBase
-//    {
-//        private readonly DataContext _context;
-
-//        public CountryController(DataContext context)
-//        {
-//            _context = context;
-//        }
-
-//        [HttpPost]
-//        public void Add(Country country)
-//        {
-//            _context.Countries.Add(country);
-//            _context.SaveChanges();
-//        }
-
-//        [HttpGet]
-//        public List<Country> GetAll()
-//        {
-//            return _context.Countries.ToList();
-//        }
-
-//        [HttpPut]
-//        public void Put(Country country)
-//        {
-//            _context.Update(country);
-//            _context.SaveChanges();
-//        }
-
-//        [HttpGet("{id}")]
-//        public IActionResult GetById(int id)
-//        {
-//            var country = _context.Countries.Find(id);
-
-//            if (country == null)
-//            {
-//                return NotFound("Data not found");
-//            }
-
-//            return Ok(country);
-//        }
-
-//        [HttpDelete("{id}")]
-//        public void Delete(int id)
-//        {
-//            var Country = _context.Countries.Find(id);
-//            if (Country != null)
-//            {
-//                _context.Countries.Remove(Country);
-//                _context.SaveChanges();
-//            }
-//        }
-
-//    }
-//}
-
-
-
-
-
-
-
-
 using System.Diagnostics.Metrics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -166,5 +94,77 @@ namespace WebApplication1.Controllers
 
     }
 }
+
+
+
+//using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Mvc;
+//using System.Diagnostics.Metrics;
+//using WebApplication1.Models;
+
+//namespace WebApplication1.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    public class CountryController : ControllerBase
+//    {
+//        private readonly DataContext _context;
+
+//        public CountryController(DataContext context)
+//        {
+//            _context = context;
+//        }
+
+//        [HttpPost]
+//        public void Add(Country country)
+//        {
+//            _context.Countries.Add(country);
+//            _context.SaveChanges();
+//        }
+
+//        [HttpGet]
+//        public List<Country> GetAll()
+//        {
+//            return _context.Countries.ToList();
+//        }
+
+//        [HttpPut]
+//        public void Put(Country country)
+//        {
+//            _context.Update(country);
+//            _context.SaveChanges();
+//        }
+
+//        [HttpGet("{id}")]
+//        public IActionResult GetById(int id)
+//        {
+//            var country = _context.Countries.Find(id);
+
+//            if (country == null)
+//            {
+//                return NotFound("Data not found");
+//            }
+
+//            return Ok(country);
+//        }
+
+//        [HttpDelete("{id}")]
+//        public void Delete(int id)
+//        {
+//            var Country = _context.Countries.Find(id);
+//            if (Country != null)
+//            {
+//                _context.Countries.Remove(Country);
+//                _context.SaveChanges();
+//            }
+//        }
+
+//    }
+//}
+
+
+
+
+
 
 

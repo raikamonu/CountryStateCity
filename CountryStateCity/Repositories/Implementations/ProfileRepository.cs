@@ -22,7 +22,6 @@ public class ProfileRepository : IProfileRepository
 
     public void Add(Profile profile)
     {
-        // 🔴 Email duplicate check yahi hoga
         var existing = _context.Profiles
             .FirstOrDefault(x => x.Email == profile.Email);
 

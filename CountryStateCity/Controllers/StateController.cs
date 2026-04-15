@@ -1,77 +1,4 @@
 ﻿
-//using Microsoft.AspNetCore.Http;
-//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
-//using WebApplication1.Models;
-
-//namespace WebApplication1.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class StateController : ControllerBase
-//    {
-//        private readonly DataContext _context;
-
-//        public StateController(DataContext context)
-//        {
-//            _context = context;
-//        }
-
-//        [HttpPost]
-//        public void Add(State state)
-//        {
-//            _context.States.Add(state);
-//            _context.SaveChanges();
-//        }
-
-//        [HttpGet]
-//        public List<State> GetAll()
-//        {
-//            return _context.States.Include(x => x.Country).ToList();
-//        }
-
-//        [HttpPut]
-//        public void Put(State state)
-//        {
-//            _context.Update(state);
-//            _context.SaveChanges();
-//        }
-
-//        [HttpGet("{id}")]
-//        public IActionResult GetById(int id)
-//        {
-//            var state = _context.States.Find(id);
-
-//            if (state == null)
-//            {
-//                return NotFound("Data not found");
-//            }
-
-//            return Ok(state);
-//        }
-
-
-//        [HttpDelete("{id}")]
-//        public void Delete(int id)
-//        {
-//            var State = _context.States.Find(id);
-//            if (State != null)
-//            {
-//                _context.States.Remove(State);
-//                _context.SaveChanges();
-//            }
-//        }
-
-
-
-//    }
-//}
-
-
-
-
-
-
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 
@@ -158,3 +85,79 @@ public class StateController : ControllerBase
         }
     }
 }
+
+
+
+
+//using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Mvc;
+//using Microsoft.EntityFrameworkCore;
+//using WebApplication1.Models;
+
+//namespace WebApplication1.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    public class StateController : ControllerBase
+//    {
+//        private readonly DataContext _context;
+
+//        public StateController(DataContext context)
+//        {
+//            _context = context;
+//        }
+
+//        [HttpPost]
+//        public void Add(State state)
+//        {
+//            _context.States.Add(state);
+//            _context.SaveChanges();
+//        }
+
+//        [HttpGet]
+//        public List<State> GetAll()
+//        {
+//            return _context.States.Include(x => x.Country).ToList();
+//        }
+
+//        [HttpPut]
+//        public void Put(State state)
+//        {
+//            _context.Update(state);
+//            _context.SaveChanges();
+//        }
+
+//        [HttpGet("{id}")]
+//        public IActionResult GetById(int id)
+//        {
+//            var state = _context.States.Find(id);
+
+//            if (state == null)
+//            {
+//                return NotFound("Data not found");
+//            }
+
+//            return Ok(state);
+//        }
+
+
+//        [HttpDelete("{id}")]
+//        public void Delete(int id)
+//        {
+//            var State = _context.States.Find(id);
+//            if (State != null)
+//            {
+//                _context.States.Remove(State);
+//                _context.SaveChanges();
+//            }
+//        }
+
+
+
+//    }
+//}
+
+
+
+
+
