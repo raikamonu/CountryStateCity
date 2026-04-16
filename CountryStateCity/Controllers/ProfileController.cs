@@ -1,4 +1,5 @@
 ﻿using CountryStateCity.Models;
+using CountryStateCity.Models.Dtos.Profile;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 
@@ -14,11 +15,11 @@ public class ProfileController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Add(Profile profile)
+    public IActionResult Add(CreateUpdateProfileDto input)
     {
         try
         {
-            _repo.Add(profile);
+            _repo.Add(input);
 
             return Ok(new
             {
@@ -35,9 +36,32 @@ public class ProfileController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetAll()
+    public IActionResult GetAll(GetProfileDto input)
     {
-        var data = _repo.GetAll();
+        var data = _repo.GetAll(input);
         return Ok(data);
     }
+
+
+    [HttpPut]
+    public IActionResult Update(UpdateProfileDto input)
+    {
+        try
+        {
+            _repo.Update(input);
+
+            return Ok(new
+            {
+                message = "Updated successfully"
+            });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new
+            {
+                error = ex.Message
+            });
+        }
+    }
+
 }
